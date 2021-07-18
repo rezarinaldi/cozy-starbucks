@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Starbucks Website Landing Page</title>
+
+    <!-- favicons -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+    />
+    <link rel="apple-touch-icon" href="assets/img/touch-icon-iphone.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/img/touch-icon-ipad.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/img/touch-icon-iphone4.png"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="index.html"
+          ><img src="assets/img/logo.png" class="logo" alt="logo-starbucks"
+        /></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="javascript:;">Menu</a></li>
+          <li><a href="javascript:;">What's New</a></li>
+          <li><a href="javascript:;">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>
+            It's not just Cozy Coffee<br />It's <span>Cozy Starbucks</span>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            iste quas nisi laudantium amet reiciendis doloribus, est assumenda
+            natus consectetur eveniet architecto voluptatibus nam cumque ad
+            temporibus cupiditate provident obcaecati.
+          </p>
+          <a href="javascript:;">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img
+            src="assets/img/img1.png"
+            class="starbucks"
+            alt="starbucks-greentea"
+          />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="assets/img/thumb1.png"
+            onclick="imgSlider('assets/img/img1.png'); changeCircleColor('#017143')"
+            alt="thumb1"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/img/thumb2.png"
+            onclick="imgSlider('assets/img/img2.png'); changeCircleColor('#eb7495')"
+            alt="thumb2"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/img/thumb3.png"
+            onclick="imgSlider('assets/img/img3.png'); changeCircleColor('#d752b1')"
+            alt="thumb3"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="https://www.facebook.com/mirvayanti.aliah.1" target="_blank"
+            ><img src="assets/img/facebook.png" alt="fb"
+          /></a>
+        </li>
+        <li>
+          <a href="javascript:;"
+            ><img src="assets/img/twitter.png" alt="twitt"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/__cozymorning/" target="_blank"
+            ><img src="assets/img/instagram.png" alt="ig"
+          /></a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- js -->
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".starbucks").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
